@@ -955,7 +955,7 @@
  * Override with M92
  *                                      X, Y, Z [, I [, J [, K]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 96.2 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 406.09, 416 }
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -1092,9 +1092,9 @@
  * Use G29 repeatedly, adjusting the Z height at each point with movement commands
  * or (with LCD_BED_LEVELING) the LCD controller.
  */
-#if DISABLED(I3MEGA_HAS_BLTOUCH)
-  #define PROBE_MANUALLY
-#endif
+//#if DISABLED(I3MEGA_HAS_BLTOUCH)
+#define PROBE_MANUALLY
+//#endif
 
 /**
  * A Fix-Mounted Probe either doesn't deploy or needs manual deployment.
@@ -1583,7 +1583,7 @@
  * these options to restore the prior leveling state or to always enable
  * leveling immediately after G28.
  */
-//#define RESTORE_LEVELING_AFTER_G28
+#define RESTORE_LEVELING_AFTER_G28
 //#define ENABLE_LEVELING_AFTER_G28
 
 /**
