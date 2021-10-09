@@ -23,7 +23,7 @@
 
 #define CONFIG_EXAMPLES_DIR "AnyCubic/i3 Mega"
 
-//#define I3MEGA_HAS_BLTOUCH
+#define I3MEGA_HAS_BLTOUCH
 //#define I3MEGA_HAS_TMC2208
 
 /**
@@ -1092,9 +1092,9 @@
  * Use G29 repeatedly, adjusting the Z height at each point with movement commands
  * or (with LCD_BED_LEVELING) the LCD controller.
  */
-//#if DISABLED(I3MEGA_HAS_BLTOUCH)
-#define PROBE_MANUALLY
-//#endif
+#if DISABLED(I3MEGA_HAS_BLTOUCH)
+  #define PROBE_MANUALLY
+#endif
 
 /**
  * A Fix-Mounted Probe either doesn't deploy or needs manual deployment.
